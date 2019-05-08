@@ -7,7 +7,7 @@ class Dashboard extends Component {
     getList() {
         let component;
         if(this.props.images.data.length > 0) {
-            component = this.props.images.data.map( img => <Card img={img} />)
+            component = this.props.images.data.map( img => <Card img={img} key={img.title}/>)
         } else {
             component = <div className="no-content"> No content avaliable...</div>
         }
@@ -31,3 +31,5 @@ const mapStateToProps = (state) => ({ images: state.images })
 export default connect(
     mapStateToProps
 )(Dashboard)
+
+export { Dashboard as UnConnectedDashboard }

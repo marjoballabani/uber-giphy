@@ -60,3 +60,5 @@ const mapStateToProps = (state) => ({ images: state.images })
 export default connect(
     mapStateToProps, {fetchImages}
 )(Navigation)
+
+export { Navigation as UnConnectedNavigation }
