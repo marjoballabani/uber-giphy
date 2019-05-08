@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Giphy image search
 
-## Available Scripts
+![alt text](https://cdn.iconscout.com/icon/free/png-256/giphy-461796.png)
 
-In the project directory, you can run:
+## Intro
+This project is created with the idea of a simple GIPHY image search and list.
 
-### `npm start`
+1. SCSS - used for the purpous of an easy to write css and more manageable.
+2. Redux - used with the idea of scalibility in the future
+3. redux-promise-middleware - integrated with Axios is also part of scalibility idea
+4. Bootstrap - to make some changes to UI faster and for Grid system, responsivnes
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+`npm i` - to install dependencies
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Than execute one of scripts you want.
 
-### `npm test`
+## Sctipts
+`npm start` for running
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm run test` run tests
 
-### `npm run build`
+`npm run build` to build for production
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Directories
+```
+├── public/                         (project root)
+│   ├── favicon.ico                 (Project favicon)
+│   ├── index.html
+│   ├── index.js
+│
+├── src/                            (project root)
+│   ├── Actions/                    (Redux actions)
+│   ├── Components/                 (Component without logic)
+│   ├── Containers/                 (Components with logic)
+│   ├── Reducers/                   (maintaining reducers)
+│   ├── scss/                       (Scss files)
+│   │    ├── css/                   (Converted scss)
+│   │    └── style.scss             (Main scss file)
+│   ├── tests/                      (Unit tests)
+│   │    └── _snapshots_/           (Components snapshot for tests)
+│   ├── App.js                      (Wrapper for other main components)
+│   ├── index.js                    (main entrypoint)
+│   └── store.js                    (maintaining stores and midlewares)
+│
+├── .gitignore
+├── package.json
+└── README.md
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What can be improved
+1. More tests
+2. UI can be done better
+3. Usage of styled components
+4. We could separate it in more components if i used react hooks.
