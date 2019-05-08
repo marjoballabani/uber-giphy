@@ -24,18 +24,30 @@ class Navigation extends Component {
     // On search field change
     handleSearch = (event) => { this.setState({search: event.target.value}) }
 
+    handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+            this.loadImages()
+        }
+    }
+
     render() {
     return (
         <div className="container-fluid">
             <nav className="navbar navbar-light bg-light fixed-top">
                 <div className="form-inline offset-md-5 ">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search"
+                    <input
+                        className="form-control mr-sm-2"
+                        type="search"
+                        placeholder="Search"
                         value={this.state.search}
-                        onChange={this.handleSearch}
-                    />
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit"
-                        onClick={() => this.loadImages()}
-                    > Search </button>
+                        onKeyPress={this.handleKeyPress}
+                        onChange={this.handleSearch} />
+                    <button
+                        className="btn btn-outline-success my-2 my-sm-0"
+                        type="submit"
+                        onClick={() => this.loadImages()}>
+                        Search
+                    </button>
                 </div>
             </nav>
         </div>
@@ -46,6 +58,5 @@ class Navigation extends Component {
 const mapStateToProps = (state) => ({ images: state.images })
 
 export default connect(
-    mapStateToProps,
-    {fetchImages}
+    mapStateToProps, {fetchImages}
 )(Navigation)
